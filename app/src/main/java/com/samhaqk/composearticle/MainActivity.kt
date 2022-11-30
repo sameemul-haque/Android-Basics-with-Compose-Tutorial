@@ -10,7 +10,7 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -66,27 +66,31 @@ fun Article(heading: String, short_para: String, long_para: String) {
             painter = image,
             contentDescription = null
         )
-        Text(
-            text = heading,
-            fontSize = 24.sp,
-            modifier = Modifier
-                .padding(16.dp)
-                .shadow(elevation = 2.dp)
-        )
-        Text(
-            text = short_para,
-            textAlign = TextAlign.Justify,
-            modifier = Modifier
-                .padding(start = 16.dp, end = 16.dp)
-                .shadow(elevation = 2.dp)
-        )
-        Text(
-            text = long_para,
-            textAlign = TextAlign.Justify,
-            modifier = Modifier
-                .padding(16.dp)
-                .shadow(elevation = 2.dp)
-        )
+        Surface(
+            color = Color.Black.copy(alpha = 0.3f),
+            modifier = Modifier.fillMaxSize()
+        ) {
+            Column {
+                Text(
+                    text = heading,
+                    fontSize = 24.sp,
+                    modifier = Modifier
+                        .padding(16.dp)
+                )
+                Text(
+                    text = short_para,
+                    textAlign = TextAlign.Justify,
+                    modifier = Modifier
+                        .padding(start = 16.dp, end = 16.dp)
+                )
+                Text(
+                    text = long_para,
+                    textAlign = TextAlign.Justify,
+                    modifier = Modifier
+                        .padding(16.dp)
+                )
+            }
+        }
     }
 }
 

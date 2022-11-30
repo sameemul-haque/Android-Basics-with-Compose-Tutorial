@@ -61,9 +61,9 @@ fun BgImg(heading: String, short_para: String, long_para: String) {
 @Composable
 fun Article(heading: String, short_para: String, long_para: String) {
     Column {
-        Text(text = heading)
-        Text(text = short_para)
-        Text(text = long_para)
+        Text(text = heading, fontSize = 24.sp,modifier = Modifier.padding(16.dp))
+        Text(text = short_para, textAlign = TextAlign.Justify, modifier = Modifier.padding(start = 16.dp, end = 16.dp))
+        Text(text = long_para, textAlign = TextAlign.Justify, modifier = Modifier.padding(16.dp))
     }
 }
 

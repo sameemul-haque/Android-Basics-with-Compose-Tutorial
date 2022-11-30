@@ -31,9 +31,9 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     BgImg(
-                        heading = "Jetpack Compose tutorial",
-                        short_para = "Jetpack Compose is a modern toolkit for building native Android UI. Compose simplifies and accelerates UI development on Android with less code, powerful tools, and intuitive Kotlin APIs.",
-                        long_para = "In this tutorial, you build a simple UI component with declarative functions. You call Compose functions to say what elements you want and the Compose compiler does the rest. Compose is built around Composable functions. These functions let you define your app\\'s UI programmatically because they let you describe how it should look and provide data dependencies, rather than focus on the process of the UI\\'s construction, such as initializing an element and then attaching it to a parent. To create a Composable function, you add the @Composable annotation to the function name."
+                        heading = stringResource(R.string.heading),
+                        short_para = stringResource(R.string.para1),
+                        long_para = stringResource(R.string.para2)
                     )
                 }
             }
@@ -90,9 +90,9 @@ fun Article(heading: String, short_para: String, long_para: String) {
 fun DefaultPreview() {
     ComposeArticleTheme {
         Article(
-            heading = "Jetpack Compose tutorial",
-            short_para = "Jetpack Compose is a modern toolkit for building native Android UI. Compose simplifies and accelerates UI development on Android with less code, powerful tools, and intuitive Kotlin APIs.",
-            long_para = "In this tutorial, you build a simple UI component with declarative functions. You call Compose functions to say what elements you want and the Compose compiler does the rest. Compose is built around Composable functions. These functions let you define your app\\'s UI programmatically because they let you describe how it should look and provide data dependencies, rather than focus on the process of the UI\\'s construction, such as initializing an element and then attaching it to a parent. To create a Composable function, you add the @Composable annotation to the function name."
+            heading = stringResource(R.string.heading),
+            short_para = stringResource(R.string.para1),
+            long_para = stringResource(R.string.para2)
         )
     }
 }

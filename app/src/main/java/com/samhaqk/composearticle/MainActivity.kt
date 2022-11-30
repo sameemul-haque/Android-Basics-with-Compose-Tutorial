@@ -5,7 +5,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.layout.R
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -31,7 +30,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Article(
+                    BgImg(
                         heading = "Jetpack Compose tutorial",
                         short_para = "Jetpack Compose is a modern toolkit for building native Android UI. Compose simplifies and accelerates UI development on Android with less code, powerful tools, and intuitive Kotlin APIs.",
                         long_para = "In this tutorial, you build a simple UI component with declarative functions. You call Compose functions to say what elements you want and the Compose compiler does the rest. Compose is built around Composable functions. These functions let you define your app\\'s UI programmatically because they let you describe how it should look and provide data dependencies, rather than focus on the process of the UI\\'s construction, such as initializing an element and then attaching it to a parent. To create a Composable function, you add the @Composable annotation to the function name."
@@ -43,6 +42,23 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
+fun BgImg(heading: String, short_para: String, long_para: String) {
+    val bg = painterResource(id = R.drawable.bgmain)
+    Box {
+        Image(
+            painter = bg,
+            contentDescription = null,
+            modifier = Modifier
+                .fillMaxHeight()
+                .fillMaxWidth(),
+            contentScale = ContentScale.Crop
+        )
+        Article(heading = heading, short_para = short_para, long_para = long_para)
+
+    }
+}
+
+@Composable
 fun Article(heading: String, short_para: String, long_para: String) {
     Column {
         Text(text = heading)
@@ -50,8 +66,6 @@ fun Article(heading: String, short_para: String, long_para: String) {
         Text(text = long_para)
     }
 }
-
-
 
 @Preview(showBackground = true)
 @Composable

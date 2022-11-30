@@ -73,18 +73,21 @@ fun Article(heading: String, short_para: String, long_para: String) {
             Column {
                 Text(
                     text = heading,
+                    color = Color.White,
                     fontSize = 24.sp,
                     modifier = Modifier
                         .padding(16.dp)
                 )
                 Text(
                     text = short_para,
+                    color = Color.White,
                     textAlign = TextAlign.Justify,
                     modifier = Modifier
                         .padding(start = 16.dp, end = 16.dp)
                 )
                 Text(
                     text = long_para,
+                    color = Color.White,
                     textAlign = TextAlign.Justify,
                     modifier = Modifier
                         .padding(16.dp)

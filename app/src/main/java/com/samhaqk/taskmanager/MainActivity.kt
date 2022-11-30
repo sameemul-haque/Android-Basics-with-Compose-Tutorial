@@ -72,12 +72,14 @@ class MainActivity : ComponentActivity() {
                 )
                 Text(
                     text = stringResource(R.string.all_tasks_completed),
+                    color = Color(0, 239, 81),
                     fontSize = 24.sp,
                     modifier = Modifier
                         .padding(top = 24.dp, bottom = 8.dp)
                 )
                 Text(
                     text = stringResource(R.string.nice_work),
+                    color = Color(0, 239, 81), // blueCheck Color(96, 56, 255)
                     fontSize = 16.sp
                 )
             }

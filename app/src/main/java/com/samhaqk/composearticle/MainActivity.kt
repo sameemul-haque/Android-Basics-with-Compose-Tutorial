@@ -60,7 +60,12 @@ fun BgImg(heading: String, short_para: String, long_para: String) {
 
 @Composable
 fun Article(heading: String, short_para: String, long_para: String) {
+    val image = painterResource(id = R.drawable.bg_compose_background)
     Column {
+        Image(
+            painter = image,
+            contentDescription = null
+        )
         Text(
             text = heading,
             fontSize = 24.sp,

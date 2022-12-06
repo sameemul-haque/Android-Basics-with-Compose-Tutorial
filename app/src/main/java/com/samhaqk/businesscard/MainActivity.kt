@@ -19,6 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.samhaqk.businesscard.ui.theme.BusinessCardTheme
@@ -72,8 +73,8 @@ fun BusinessCard() {
                 .width(150.dp)
                 .padding(top = 16.dp, bottom = 16.dp)
         )
-        Text(text = "SamHaqK")
-        Text(text = "Android Developer", color = Color(0xFF3ddc84))
+        Text(text = stringResource(R.string.fullname))
+        Text(text = stringResource(R.string.title), color = Color(0xFF3ddc84))
     }
     //Bottom
     Column(
@@ -83,9 +84,9 @@ fun BusinessCard() {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Bottom
     ) {
-        BottomCardRow("+91 8078 435 699",Icons.Rounded.Phone)
-        BottomCardRow("@samhaqk",Icons.Rounded.Share)
-        BottomCardRow("samhaqk@gmail.com",Icons.Rounded.Email)
+        BottomCardRow(stringResource(R.string.mobile_number),Icons.Rounded.Phone)
+        BottomCardRow(stringResource(R.string.social_id),Icons.Rounded.Share)
+        BottomCardRow(stringResource(R.string.email),Icons.Rounded.Email)
     }
 }
 

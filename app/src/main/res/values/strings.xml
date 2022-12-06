@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Business Card</string>
+    <string name="title">Android Developer</string>
+    <string name="fullname">SamHaqK</string>
+    <string name="mobile_number">+91 8078 435 699</string>
+    <string name="social_id">\@samhaqk</string>
+    <string name="email">samhaqk@gmail.com</string>
 </resources>

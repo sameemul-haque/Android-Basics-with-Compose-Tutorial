@@ -16,6 +16,7 @@ import androidx.compose.material.icons.rounded.Share
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -58,7 +59,7 @@ fun BusinessCard() {
                 .padding(top = 16.dp, bottom = 16.dp)
         )
         Text(text = "SamHaqK")
-        Text(text = "Android Developer")
+        Text(text = "Android Developer", color = Color(0xFF3ddc84))
     }
     //Bottom
     Column(

@@ -6,7 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Icon
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
@@ -32,7 +31,7 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
+                    color = Color(0xFF192841)
                 ) {
                     BusinessCard()
                 }
@@ -50,7 +49,7 @@ fun BottomCardRow(info: String, iconName: ImageVector) {
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         Icon(iconName, contentDescription = null,tint = Color(0xFF3ddc84))
-        Text(info)
+        Text(info, color = Color.White)
     }
 }
 
@@ -73,7 +72,7 @@ fun BusinessCard() {
                 .width(150.dp)
                 .padding(top = 16.dp, bottom = 16.dp)
         )
-        Text(text = stringResource(R.string.fullname))
+        Text(text = stringResource(R.string.fullname), color = Color.White)
         Text(text = stringResource(R.string.title), color = Color(0xFF3ddc84))
     }
     //Bottom

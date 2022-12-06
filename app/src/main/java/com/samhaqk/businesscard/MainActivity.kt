@@ -63,18 +63,18 @@ fun BusinessCard() {
     //Bottom
     Column(
         modifier = Modifier
-            .fillMaxWidth(),
+            .fillMaxWidth().padding(top = 32.dp, bottom = 32.dp, start = 100.dp, end = 100.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Bottom
     ) {
-        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
+        Row(modifier = Modifier.fillMaxWidth().padding(top = 8.dp, bottom = 8.dp), horizontalArrangement = Arrangement.SpaceBetween) {
         Icon(
             Icons.Rounded.Phone,
             contentDescription = null
         )
         Text(text = "+91 8078 435 699")
     }
-        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
+        Row(modifier = Modifier.fillMaxWidth().padding(top = 8.dp, bottom = 8.dp), horizontalArrangement = Arrangement.SpaceBetween) {
             Icon(
                 Icons.Rounded.Share,
                 contentDescription = null
@@ -82,7 +82,7 @@ fun BusinessCard() {
             Text(text = "@samhaqk")
 
         }
-        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
+        Row(modifier = Modifier.fillMaxWidth().padding(top = 8.dp, bottom = 8.dp), horizontalArrangement = Arrangement.SpaceBetween) {
             Icon(
                 Icons.Rounded.Email,
                 contentDescription = null

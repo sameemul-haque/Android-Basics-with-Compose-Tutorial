@@ -10,9 +10,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.Email
 import androidx.compose.material.icons.rounded.Phone
-import androidx.compose.material.icons.rounded.Share
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -38,7 +36,16 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
+@Composable
+fun BottomCardRow(info: String) {
+    Row(modifier = Modifier.fillMaxWidth().padding(top = 8.dp, bottom = 8.dp), horizontalArrangement = Arrangement.SpaceBetween) {
+        Icon(
+            Icons.Rounded.Phone,
+            contentDescription = null
+        )
+        Text(info)
+    }
+}
 @Composable
 fun BusinessCard() {
     val profile = painterResource(id = R.drawable.profile)
@@ -68,28 +75,9 @@ fun BusinessCard() {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Bottom
     ) {
-        Row(modifier = Modifier.fillMaxWidth().padding(top = 8.dp, bottom = 8.dp), horizontalArrangement = Arrangement.SpaceBetween) {
-        Icon(
-            Icons.Rounded.Phone,
-            contentDescription = null
-        )
-        Text(text = "+91 8078 435 699")
-    }
-        Row(modifier = Modifier.fillMaxWidth().padding(top = 8.dp, bottom = 8.dp), horizontalArrangement = Arrangement.SpaceBetween) {
-            Icon(
-                Icons.Rounded.Share,
-                contentDescription = null
-            )
-            Text(text = "@samhaqk")
-
-        }
-        Row(modifier = Modifier.fillMaxWidth().padding(top = 8.dp, bottom = 8.dp), horizontalArrangement = Arrangement.SpaceBetween) {
-            Icon(
-                Icons.Rounded.Email,
-                contentDescription = null
-            )
-            Text(text = "samhaqk@gmail.com")
-        }
+        BottomCardRow("+91 8078 435 699")
+        BottomCardRow("@samhaqk")
+        BottomCardRow("samhaqk@gmail.com")
     }
 }
 

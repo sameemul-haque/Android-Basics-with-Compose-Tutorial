@@ -49,7 +49,7 @@ fun BottomCardRow(info: String, iconName: ImageVector) {
             .padding(top = 8.dp, bottom = 8.dp),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
-        Icon(iconName, contentDescription = null)
+        Icon(iconName, contentDescription = null,tint = Color(0xFF3ddc84))
         Text(info)
     }
 }

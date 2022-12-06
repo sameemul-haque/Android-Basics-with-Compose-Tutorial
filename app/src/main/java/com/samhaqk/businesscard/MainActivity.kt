@@ -10,11 +10,14 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.Email
 import androidx.compose.material.icons.rounded.Phone
+import androidx.compose.material.icons.rounded.Share
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -36,16 +39,20 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
 @Composable
-fun BottomCardRow(info: String) {
-    Row(modifier = Modifier.fillMaxWidth().padding(top = 8.dp, bottom = 8.dp), horizontalArrangement = Arrangement.SpaceBetween) {
-        Icon(
-            Icons.Rounded.Phone,
-            contentDescription = null
-        )
+fun BottomCardRow(info: String, iconName: ImageVector) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(top = 8.dp, bottom = 8.dp),
+        horizontalArrangement = Arrangement.SpaceBetween
+    ) {
+        Icon(iconName, contentDescription = null)
         Text(info)
     }
 }
+
 @Composable
 fun BusinessCard() {
     val profile = painterResource(id = R.drawable.profile)
@@ -71,13 +78,14 @@ fun BusinessCard() {
     //Bottom
     Column(
         modifier = Modifier
-            .fillMaxWidth().padding(top = 32.dp, bottom = 32.dp, start = 100.dp, end = 100.dp),
+            .fillMaxWidth()
+            .padding(top = 32.dp, bottom = 32.dp, start = 100.dp, end = 100.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Bottom
     ) {
-        BottomCardRow("+91 8078 435 699")
-        BottomCardRow("@samhaqk")
-        BottomCardRow("samhaqk@gmail.com")
+        BottomCardRow("+91 8078 435 699",Icons.Rounded.Phone)
+        BottomCardRow("@samhaqk",Icons.Rounded.Share)
+        BottomCardRow("samhaqk@gmail.com",Icons.Rounded.Email)
     }
 }
 

@@ -1,3 +1,3 @@
-# Android-Basics-with-Compose-Tutorial
+# Android Basics with Compose Tutorial
 
-- a main repo to add the repos from the tutorial 
+[![BusinessCard](https://img.shields.io/badge/BusinessCard-7F52FF?style=for-the-badge&logo=kotlin&logoColor=ffffff "BusinessCard")](/BusinessCard)
